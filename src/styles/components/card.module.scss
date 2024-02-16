@@ -1,0 +1,46 @@
+.cardContainer {
+  border: 1.5px solid #8a2be2;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+
+  box-shadow: 0 4px 8px 0 rgba(138, 43, 226, 0.2); /* Adjusted to match border color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  .avatar {
+    border-radius: 50px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    .name {
+      margin: 0;
+      color: white;
+    }
+
+    .email {
+      @extend .name;
+      font-size: 1rem;
+      color: grey;
+    }
+  }
+}
+
+.cardContainer:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(138, 43, 226, 0.4);
+  cursor: pointer;
+}
+
+.cardContainerAdmin {
+  @extend .cardContainer;
+  border: 1.5px solid #ffc0cb;
+}
+
+.cardContainerAdmin:hover {
+  box-shadow: 0 4px 8px rgba(255, 174, 188, 0.4);
+}
